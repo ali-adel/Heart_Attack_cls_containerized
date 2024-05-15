@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Prediction Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> <!-- No need for centered class, as it's handled by CSS -->
+    
+    <h1>Heart Prediction Form</h1>
+    <div id="myform">
+
+        <form id="heartForm" action="http://localhost:8000/Heart_Prediction" method="POST">
+            <!-- First column -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" step="any" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
+
+            <label for="impluse">Impulse:</label>
+            <input type="number" id="impluse" name="impluse" step="any" required>
+
+            <label for="pressurehight">High Blood Pressure:</label>
+            <input type="number" id="pressurehight" name="pressurehight" step="any" required>
+
+            <!-- Second column -->
+            <label for="pressurelow">Low Blood Pressure:</label>
+            <input type="number" id="pressurelow" name="pressurelow" step="any" required>
+
+            <label for="glucose">Glucose Level:</label>
+            <input type="number" id="glucose" name="glucose" step="any" required>
+
+            <label for="kcm">Potassium Level:</label>
+            <input type="number" id="kcm" name="kcm" step="any" required>
+
+            <label for="troponin">Troponin Level:</label>
+            <input type="number" id="troponin" name="troponin" step="any" required>
+
+            <button type="submit" id="predictButton">Predict</button> <!-- Change type to button -->
+        </form>
+
+        <div id="predictionResult"></div>
+    </div>
+</body>
+</html>
